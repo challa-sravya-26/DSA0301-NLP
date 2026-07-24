@@ -1,0 +1,17 @@
+import re
+
+text = "My phone number is 9876543210 and email is sravya123@gmail.com"
+
+# Search for a phone number
+phone = re.search(r"\d{10}", text)
+
+if phone:
+    print("Phone Number Found:", phone.group())
+
+# Find email
+email = re.findall(r"\S+@\S+", text)
+print("Email:", email)
+
+# Find all words starting with 's'
+words = re.findall(r"\bs\w*", text, re.IGNORECASE)
+print("Words starting with s:", words)
